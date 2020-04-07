@@ -1,0 +1,34 @@
+SET PAGES 0
+SET FEEDBACK OFF
+set echo off
+set linesize 6000
+set pagesize 0
+set sqlprompt ''
+set trimspool on
+SET TERMOUT OFF
+set headsep off
+spool D:\MiniVelos\Sources\er_StudyStat.csv
+set markup csv on
+SELECT  
+  PK_STUDYSTAT,
+  FK_CODELST_REVBOARD,
+  FK_CODELST_STUDYSTAT,
+  FK_SITE,
+  FK_STUDY,
+  FK_USER_DOCBY,
+  CREATED_ON,
+  CREATOR,
+  CURRENT_STAT,
+  LAST_MODIFIED_BY,
+  LAST_MODIFIED_DATE,
+  OUTCOME,
+  STATUS_TYPE,
+  STUDYSTAT_ASSIGNEDTO,
+  STUDYSTAT_DATE,
+  STUDYSTAT_ENDT,
+  STUDYSTAT_MEETDT,
+  STUDYSTAT_NOTE,
+  STUDYSTAT_VALIDT
+FROM ERES.ER_STUDYSTAT;
+spool off;
+exit;
