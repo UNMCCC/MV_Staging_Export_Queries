@@ -14,10 +14,10 @@ SELECT
     CodeLst_Type,
     CodeLst_SubTyp,
     CodeLst_Desc,
-    Created_On,
+    to_char(Created_On,'DD-MON-YYYY'),
     Creator,
     Last_Modified_By,
-    Last_Modified_Date
+    to_char(Last_Modified_Date,'DD-MON-YYYY')
 FROM ERES.ER_CODELST;
 spool off;
 exit
