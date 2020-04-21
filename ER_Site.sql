@@ -12,10 +12,10 @@ set markup csv on
 SELECT
     PK_SITE,
     FK_CodeLst_Type,
-    Created_on,
+    to_char(Created_on,'DD-MON-YYYY'),
     Creator,
     Last_Modified_By,
-    Last_modified_date,
+    to_char(Last_modified_date,'DD-MON-YYYY'),
     Site_Hidden,
     Site_ID,
     Site_Name,
