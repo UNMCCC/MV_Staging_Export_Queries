@@ -14,7 +14,7 @@ SELECT
     FK_CodeLst_Stat,
     FK_Per,
     FK_Study,
-    to_char(Created_On,'DD-MON-YYYY')
+    to_char(Created_On,'DD-MON-YYYY'),
     Creator,   
     Current_Stat,   
     Inform_Consent_Ver,
