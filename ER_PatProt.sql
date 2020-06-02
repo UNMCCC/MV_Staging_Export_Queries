@@ -11,7 +11,8 @@ spool D:\MiniVelos\Sources\er_PatProt.csv
 set markup csv on
 SELECT
     PK_Patprot,
-    FK_CodeLstLoc,     
+    FK_CodeLstLoc, 
+    FK_CODELST_PTST_DTH_STDREL,    
     FK_Per,
     FK_Site_Enrolling,  
     FK_Study,
