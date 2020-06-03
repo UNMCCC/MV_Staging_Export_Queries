@@ -7,11 +7,11 @@ set sqlprompt ''
 set trimspool on
 SET TERMOUT OFF
 set headsep off
-spool D:\MiniVelos\Sources\tccids.csv
+spool D:\MiniVelos\Sources\Pat_Demog_ORIEN.csv
 set markup csv on
 SELECT
-    ER_PATPROT.PATPROT_PATSTDID AS TCCID    -- Patient Study ID [TCCID]
-    ,PERSON.PERSON_DOB AS DOB                -- Patient Date of Birth [DOB]
+    REPLACE(SUBSTR(ER_PATPROT.PATPROT_PATSTDID,10,11),'-') AS TCCID    -- Patient Study ID [TCCID]
+    ,TO_CHAR(PERSON.PERSON_DOB,'DD-MON-YYYY') AS DOB    -- Patient Date of Birth [DOB]
     ,PERSON.PERSON_CODE AS MRN               -- Patient ID [MRN]
 FROM  ERES.ER_PATPROT ER_PATPROT 
       INNER JOIN ERES.ER_PER ER_PER     ON ER_PATPROT.FK_PER = ER_PER.PK_PER
