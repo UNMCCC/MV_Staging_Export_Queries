@@ -51,7 +51,6 @@ SELECT
     STUDY_SPONSORID,
     STUDY_TITLE
 FROM ERES.ER_STUDY
-WHERE PK_STUDY NOT IN (2558, 2767, 3902, 4723) -- 2558=No Study Available, 2767=AZAlberts, 3902=velosqa_study, 4723=PEDS ONC No Study Available
 ;
 spool off;
 exit;
